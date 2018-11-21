@@ -2,14 +2,14 @@ from os import remove, path
 import hashlib, argparse, glob
 
 
-def main(dirs, file_type='png'):
+def main(dirs):
     """the main function to execute"""
 
     for cur_dir in dirs:
-        only_files = glob.glob(cur_dir + '/**/*.{ext}'.format(ext=file_type), recursive=True)
-        print(only_files)
+        text_files = glob.glob(cur_dir + '/**/*.[h|m]', recursive=True)
+        print(text_files)
 
-        for file in only_files:
+        for file in text_files:
             if not path.isfile(file):
                 continue
 
@@ -17,7 +17,7 @@ def main(dirs, file_type='png'):
             print("original file: " + file + " md5: " + hashlib.md5(file_binary).hexdigest())
             new_file_path = file + "_temp"
             with open(new_file_path, 'wb') as new_file:
-                new_file.write(file_binary + '\0'.encode('ascii'))
+                new_file.write(file_binary + '\n'.encode('ascii'))
             print("new file: " + new_file_path + " md5: " + hashlib.md5(open(new_file_path, 'rb').read()).hexdigest())
 
             remove(file)
@@ -34,10 +34,9 @@ if __name__ == '__main__':
     """run the main method if this script is executed."""
 
     parser = argparse.ArgumentParser(description="directory parser")
-    parser.add_argument('file_extension', metavar='t', type=str, nargs=1, help='The file extension to match.')
-    parser.add_argument('directories', metavar='DIR', type=str, nargs='+', help='The directory to search recursively.')
+    parser.add_argument('directories', metavar='DIR', type=str, nargs='+', help='Input the directory to change images.')
     args = parser.parse_args()
-    print(args.file_extension[0], args.directories)
+    print(args.directories)
 
-    main(args.directories, args.file_extension[0])
+    main(args.directories)
 
