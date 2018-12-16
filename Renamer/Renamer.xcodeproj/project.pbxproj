@@ -30,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		EE4FFEBF21C66E450080A3DE /* LocalizationRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRenamer.swift; sourceTree = "<group>"; };
+		EE4FFEC221C6806E0080A3DE /* TrashCodes.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrashCodes.cfg; sourceTree = "<group>"; };
 		EE9FAEEE21C3954B000DB936 /* CodeInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInjector.swift; sourceTree = "<group>"; };
 		EEC1041121C22CEB00B4C74F /* Renamer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Renamer; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC1041421C22CEB00B4C74F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -50,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE4FFEC121C6804F0080A3DE /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				EE4FFEC221C6806E0080A3DE /* TrashCodes.cfg */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		EEC1040821C22CEB00B4C74F = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +78,7 @@
 		EEC1041321C22CEB00B4C74F /* Renamer */ = {
 			isa = PBXGroup;
 			children = (
+				EE4FFEC121C6804F0080A3DE /* Configs */,
 				EEC1042121C22E4100B4C74F /* Prints */,
 				EEC1041421C22CEB00B4C74F /* main.swift */,
 				EEC10B8E21C3584600B4C74F /* Renamer.swift */,
