@@ -2,7 +2,7 @@
 
 Some scripts used to automate development tasks.
 
-# [中文]()
+# [中文](./README-zh.md)
 
 ## [ios pakaging python script](./ios-pakging/)
 
@@ -12,7 +12,7 @@ Originally, this was used to automate ad-hoc pakaging procedures.
 
 If you want to change all png files in your XCode project without changing their contents, this script might be of help to you.
 
-## [Rename files, assets, localization keys](Renamer)
+## [Rename files, assets, localization keys](./Renamer)
 
 Renamer is a Swift command line tool to help you rename basically everything in your project. 
 
